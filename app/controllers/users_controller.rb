@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  skip_before_action :require_login , only: [:new,:show, :create]
 
   # GET /users
   # GET /users.json
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find_by id: params[:id]
   end
 
   # GET /users/new
@@ -71,7 +73,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :phone, :email,:password,:password_confirmation)
     end
-    def show
-    @user = User.find_by id: params[:id]
-  end
 end

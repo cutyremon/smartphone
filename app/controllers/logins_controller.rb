@@ -1,4 +1,5 @@
 class LoginsController < ApplicationController
+	skip_before_action :require_login , only: [:new, :create]
   def new
   end
   def create 
@@ -14,6 +15,8 @@ class LoginsController < ApplicationController
     end
   end
   def destroy
-  	render :new
+  	log_out
+  	flash[:success]="you are logged out"
+  	redirect_to login_path
   end
 end

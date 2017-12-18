@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'login' => 'logins#new'
   post 'login' => 'logins#create'
   delete 'logout' => 'logins#destroy'
+  get 'home' => 'users#show'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
