@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @smartphone.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @smartphone.category %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @smartphone.picture %>
+</p>
+
+<p>
+  <strong>Rate avg:</strong>
+  <%= @smartphone.rate_AVG %>
+</p>
+
+<%= link_to 'Edit', edit_smartphone_path(@smartphone) %> |
+<%= link_to 'Back', smartphones_path %>

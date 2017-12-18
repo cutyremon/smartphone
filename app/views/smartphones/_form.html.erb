@@ -1,0 +1,37 @@
+<%= form_with(model: smartphone, local: true) do |form| %>
+  <% if smartphone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(smartphone.errors.count, "error") %> prohibited this smartphone from being saved:</h2>
+
+      <ul>
+      <% smartphone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :smartphone_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category, id: :smartphone_category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture, id: :smartphone_picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rate_AVG %>
+    <%= form.text_field :rate_AVG, id: :smartphone_rate_AVG %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
