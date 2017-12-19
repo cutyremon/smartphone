@@ -1,24 +1,32 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h1 class="title">LOGIN APP</h1>
-    </div>
-    <div class="col-lg-12 form-group">
-      <label for="">Welcome</label>
-      <%= link_to current_user.name, user_path(current_user) %>
-    </div>
-    <div class="col-lg-12 form-group">
-      <label for="">List Users</label>
-      <table class="table">
-        <thead>
-          <th>ID</th>
-          <th>User Name</th>
-        </thead>
-        <tbody>
-          <%= render @users %>
-        </tbody>
-      </table>
-    </div>
+<% content_for :title do %>
+home
+<% end %>
+<% content_for :body do %>
+<div class="row">
+  <div class="col-lg-12 text-center">
+  <h1 style="color: red; margin-top: 75px">LOGIN APP</h1>
   </div>
+  <div class="col-lg-12 form-group">
+    <label for="">Welcome</label>
+    <%= link_to current_user.name, user_path(current_user) %>
+  </div>
+  <div class="col-lg-12 form-group">
+    <label for="">List Users</label>
+    <table class="table">
+      <thead>
+        <th>ID</th>
+        <th>User Name</th>
+      </thead>
+      <tbody>
+       <% @users.each do |user| %>
+       <tr>
+         <td><%= user.id %></td>
+         <td> <%= user.name %></td>
+       </tr>
+       <% end %>
+     </tbody>
+   </table>
+ </div>
 </div>
+<% end %>
 

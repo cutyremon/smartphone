@@ -54,4 +54,8 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "bcrypt"
 gem "sprockets-rails", :require => "sprockets/railtie"
-gem "bootstrap-sass", "~> 3.3.6"
+gem "bootstrap-sass", "~> 3.3.7"
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+group :production do
+  gem 'pg', '0.18.4'
+end
