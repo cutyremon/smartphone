@@ -7,11 +7,5 @@ class ApplicationController < ActionController::Base
 			redirect_to login_path
 		end 
 	end
-	def authenticate_user!
-		if user_signed_in?
-			super 
-		else
-			redirect_to your_path, notice: "Please Login to view that page!"
-		end
-	end
+	
 end
