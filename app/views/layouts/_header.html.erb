@@ -6,7 +6,7 @@
 				<div class="container">
 					<div class="navbar-header">
 						<!-- Logo Starts -->
-						<h2>Smartphone</h2>
+						<h2 style="font-size: 34px;">Smartphone</h2>
 						<!-- #Logo Ends -->
 
 
@@ -21,12 +21,17 @@
 
 
 					<!-- Nav Starts -->
-					<div class="navbar-collapse  collapse">
-						<ul class="nav navbar-nav navbar-right scroll">
+					<div>
+						<ul class="nav navbar-nav navbar-right">
 							<li class="active"><%= link_to "home", home_path %></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#works">Works</a></li>
-							<li><a href="#partners">Partners</a></li>
+							<li>
+								<%= link_to "Smartphone", smartphones_path %>
+							</li>
+							<li>
+								<%= link_to "Review", reviews_path %>
+							</li>
+							<li><%= link_to "Album", albums_path %>
+							</li>
 							<li><a href="#contact">Contact</a></li>
 							<% if(current_user) %>
 							<li><%= link_to current_user.name, user_path(current_user) %></li>

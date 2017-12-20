@@ -1,34 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% content_for :body do %>
+<div class="container" style="margin-top: 336px;">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @review.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @review.user %>
+  </p>
 
-<p>
-  <strong>Smartphone:</strong>
-  <%= @review.smartphone %>
-</p>
+  <p>
+    <strong>Smartphone:</strong>
+    <%= @review.smartphone %>
+  </p>
 
-<p>
-  <strong>Piture:</strong>
-  <%= @review.piture %>
-</p>
+  <p>
+    <strong>Piture:</strong>
+    <%= @review.piture %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @review.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @review.description %>
+  </p>
 
-<p>
-  <strong>Rate:</strong>
-  <%= @review.rate %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @review.comment %>
-</p>
-
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+  <p>
+    <strong>Rate:</strong>
+    <%= @review.rate %>
+  </p>
+  
+  <%= link_to 'Edit', edit_review_path(@review) %> |
+  <%= link_to 'Back', reviews_path %>
+</div>
+<% end %>

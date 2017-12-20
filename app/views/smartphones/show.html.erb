@@ -1,24 +1,28 @@
+<% content_for :body do %>
+<div class="container" style="margin-top: 336px;">
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @smartphone.name %>
+	<strong>Name:</strong>
+	<%= @smartphone.name %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @smartphone.category %>
+	<strong>Category:</strong>
+	<%= @smartphone.category %>
 </p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @smartphone.picture %>
+	<strong>Picture:</strong>
+	<%= @smartphone.picture %>
 </p>
 
 <p>
-  <strong>Rate avg:</strong>
-  <%= @smartphone.rate_AVG %>
+	<strong>Rate avg:</strong>
+	<%= @smartphone.rate_AVG %>
 </p>
 
 <%= link_to 'Edit', edit_smartphone_path(@smartphone) %> |
 <%= link_to 'Back', smartphones_path %>
+</div>
+<% end %>

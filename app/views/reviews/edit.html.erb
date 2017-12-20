@@ -1,6 +1,10 @@
-<h1>Editing Review</h1>
+<% content_for :body do %>
+<div class="container" style="margin-top: 336px;">
+	<h1>Editing Review</h1>
 
-<%= render 'form', review: @review %>
+	<%= render 'form', review: @review %>
 
-<%= link_to 'Show', @review %> |
-<%= link_to 'Back', reviews_path %>
+	<%= link_to 'Show', @review %> |
+	<%= link_to 'Back', reviews_path %>
+</div>
+<% end %>
